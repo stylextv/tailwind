@@ -1,2 +1,1 @@
 # Tailwind
-🍁👾 Minecraft pathfinding bot.

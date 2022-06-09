@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "tailwind",
+  "version": "${version}",
+
+  "name": "Tailwind",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "StylexTV"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/StylexTV/Tailwind",
+    "issues": "https://github.com/StylexTV/Tailwind/issues"
+  },
+
+  "license": "GPL-3.0",
+  "icon": "assets/tailwind/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.tailwind.Tailwind"
+    ]
+  },
+  "mixins": [
+    "tailwind.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  }
+}

@@ -8,11 +8,17 @@ public class XZGoal extends Goal {
 	private int x;
 	private int z;
 	
+	public XZGoal(int x, int z) {
+		this.x = x;
+		this.z = z;
+	}
+	
 	@Override
 	public double cost(BlockPos pos) {
-		pos = pos.subtract(position);
+		int x = pos.getX() - this.x;
+		int z = pos.getZ() - this.z;
 		
-		return absoluteCost(pos);
+		return absoluteCost(x, z);
 	}
 	
 	@Override
@@ -34,6 +40,13 @@ public class XZGoal extends Goal {
 	}
 	
 	public static double absoluteCost(BlockPos pos) {
+		int x = pos.getX();
+		int z = pos.getZ();
+		
+		return absoluteCost(x, z);
+	}
+	
+	public static double absoluteCost(int x, int z) {
 		
 	}
 	

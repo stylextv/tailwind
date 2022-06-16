@@ -7,11 +7,15 @@ public class YLevelGoal extends Goal {
 	
 	private int y;
 	
+	public YLevelGoal(int y) {
+		this.y = y;
+	}
+	
 	@Override
 	public double cost(BlockPos pos) {
-		pos = pos.subtract(position);
+		int y = pos.getY() - this.y;
 		
-		return absoluteCost(pos);
+		return absoluteCost(y);
 	}
 	
 	@Override
@@ -29,6 +33,12 @@ public class YLevelGoal extends Goal {
 	}
 	
 	public static double absoluteCost(BlockPos pos) {
+		int y = pos.getY();
+		
+		return absoluteCost(y);
+	}
+	
+	public static double absoluteCost(int y) {
 		
 	}
 	

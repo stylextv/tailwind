@@ -7,6 +7,10 @@ public class BlockGoal extends Goal {
 	
 	private BlockPos position;
 	
+	public BlockGoal(BlockPos pos) {
+		this.position = pos;
+	}
+	
 	@Override
 	public double cost(BlockPos pos) {
 		pos = pos.subtract(position);

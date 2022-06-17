@@ -4,6 +4,9 @@ import net.tailwind.chat.command.Command;
 
 public class HelpCommand extends Command {
 	
-	
+	@Override
+	public void onExecute() {
+		
+	}
 	
 }

@@ -14,6 +14,10 @@ public class Command {
 		
 	}
 	
+	public void execute() {
+		// check all presets
+	}
+	
 	public static Command[] getCommands() {
 		return COMMANDS;
 	}

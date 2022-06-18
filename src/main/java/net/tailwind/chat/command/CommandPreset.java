@@ -1,20 +1,30 @@
 package net.tailwind.chat.command;
 
 import net.tailwind.chat.command.argument.ArgumentType;
+import net.tailwind.chat.message.MessageReader;
 
-public abstract class CommandPreset {
+public class CommandPreset {
 	
 	private ArgumentType<?>[] argumentTypes;
 	
+	private CommandExecutionFunction executionFunction;
+	
 	public CommandPreset(ArgumentType<?>... argumentTypes) {
 		this.argumentTypes = argumentTypes;
+		
+		this.executionFunction = (name, pos, pos2) -> {};
 	}
 	
-	// TODO remove?
-	public abstract boolean onExecute();
+	public void execute() {
+		
+	}
 	
-	// TODO rename?
-	public boolean matchesArguments() {
+	public void parseMessage(MessageReader reader) {
+		for(ArgumentType<?> type : argumentTypes) {
+			
+			type.parseMessage(reader);
+		}
+		
 		
 	}
 	

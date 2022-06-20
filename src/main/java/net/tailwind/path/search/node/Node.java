@@ -45,6 +45,10 @@ public class Node {
 		data.setValue(NodeFeature.POSITION, pos);
 	}
 	
+	public boolean hasParent() {
+		return data.hasFeature(NodeFeature.PARENT);
+	}
+	
 	public Node getParent() {
 		return data.getValue(NodeFeature.PARENT);
 	}

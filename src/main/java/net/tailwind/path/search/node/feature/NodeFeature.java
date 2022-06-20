@@ -16,8 +16,15 @@ public abstract class NodeFeature<T> {
 	
 	private boolean persistant;
 	
+	private T defaultValue;
+	
 	public NodeFeature(boolean persistant) {
+		this(persistant, null);
+	}
+	
+	public NodeFeature(boolean persistant, T defaultValue) {
 		this.persistant = persistant;
+		this.defaultValue = defaultValue;
 	}
 	
 	public abstract long hashValue(T value);
@@ -26,8 +33,8 @@ public abstract class NodeFeature<T> {
 		return persistant;
 	}
 	
-	public void setPersistant(boolean persistant) {
-		this.persistant = persistant;
+	public T getDefaultValue() {
+		return defaultValue;
 	}
 	
 }

@@ -5,7 +5,7 @@ import net.tailwind.path.search.node.feature.NodeFeature;
 public class CostFeature extends NodeFeature<Double> {
 	
 	public CostFeature() {
-		super(false);
+		super(false, 0D);
 	}
 	
 	@Override

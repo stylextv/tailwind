@@ -18,7 +18,11 @@ public class NodeData {
 	
 	@SuppressWarnings("unchecked")
 	public <T> T getValue(NodeFeature<T> feature) {
-		return (T) values.get(feature);
+		T value = (T) values.get(feature);
+		
+		if(value == null) return feature.getDefaultValue();
+		
+		return value;
 	}
 	
 	public <T> void setValue(NodeFeature<T> feature, T value) {
